@@ -46,16 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddHero.cs" />
-    <Compile Include="AddSuperhero.cs">
+    <Compile Include="DataLayer\AddHero.cs" />
+    <Compile Include="Forms\AddSuperhero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddSuperhero.Designer.cs">
+    <Compile Include="Forms\AddSuperhero.Designer.cs">
       <DependentUpon>AddSuperhero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Forms\SuperHeroHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuperHeroHome.Designer.cs">
+      <DependentUpon>SuperHeroHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddSuperhero.resx">
+    <Compile Include="Forms\ViewAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewAll.Designer.cs">
+      <DependentUpon>ViewAll.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AddSuperhero.resx">
       <DependentUpon>AddSuperhero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -67,6 +79,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\SuperHeroHome.resx">
+      <DependentUpon>SuperHeroHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewAll.resx">
+      <DependentUpon>ViewAll.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,6 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LogicLayer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddSuperhero", "AddSuperhero\AddSuperhero.csproj", "{B870C681-0B0D-4B65-B0AC-18565B02DDB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRG282_SuperHeroProject", "AddSuperhero\PRG282_SuperHeroProject.csproj", "{B870C681-0B0D-4B65-B0AC-18565B02DDB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

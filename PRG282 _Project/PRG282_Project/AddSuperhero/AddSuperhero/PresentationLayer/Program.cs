@@ -14,7 +14,7 @@ namespace AddSuperhero
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddSuperhero());
+            Application.Run(new SuperHeroHome());
         }
     }
 }

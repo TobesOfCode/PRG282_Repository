@@ -73,5 +73,14 @@ namespace AddSuperhero
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SuperHeroHome home = new SuperHeroHome();
+
+            home.Visible = true;
+
+            this.Hide();
+        }
     }
 }
