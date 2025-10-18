@@ -1,0 +1,22 @@
+# Build Folders
+bin/
+obj/
+Debug/
+Release/
+
+# Visual Studio Settings
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.dbmdl
+
+# Temporary Files
+*.log
+*.tmp
+*.bak
+
+# Other
+[Tt]humbs.db
+[Dd]esktop.ini
