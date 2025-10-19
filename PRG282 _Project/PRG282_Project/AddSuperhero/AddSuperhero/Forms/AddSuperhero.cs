@@ -16,6 +16,12 @@ namespace AddSuperhero
         public AddSuperhero()
         {
             InitializeComponent();
+            this.FormClosed += SuperFormClosed;
+        }
+
+        private void SuperFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -81,6 +87,11 @@ namespace AddSuperhero
             home.Visible = true;
 
             this.Hide();
+        }
+
+        private void AddSuperhero_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

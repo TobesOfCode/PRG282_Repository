@@ -191,6 +191,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddSuperhero";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AddSuperhero_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

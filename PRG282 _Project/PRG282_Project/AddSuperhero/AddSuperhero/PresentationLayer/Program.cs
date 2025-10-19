@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AddSuperhero;
+using AddSuperhero.Forms;
 
 namespace AddSuperhero
 {
@@ -14,7 +15,7 @@ namespace AddSuperhero
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SuperHeroHome());
+            Application.Run(new LoadingScreen());
         }
     }
 }

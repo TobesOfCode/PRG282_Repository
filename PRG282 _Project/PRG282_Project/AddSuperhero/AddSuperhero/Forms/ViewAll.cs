@@ -16,6 +16,12 @@ namespace AddSuperhero
         public ViewAll()
         {
             InitializeComponent();
+            this.FormClosed += SuperFormClosed;
+        }
+
+        private void SuperFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void ViewAll_Load(object sender, EventArgs e)

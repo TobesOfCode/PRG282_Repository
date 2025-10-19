@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperheroSummaryApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,27 +17,38 @@ namespace AddSuperhero
         public SuperHeroHome()
         {
             InitializeComponent();
+            this.FormClosed += SuperHeroHome_FormClosed;
+        }
+
+        private void SuperHeroHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            // Create an instance of Form2
             AddSuperhero addHero = new AddSuperhero();
-
-            // Show Form2
             addHero.Show();
-
-            // Optionally, hide Form1
             this.Hide();
         }
 
         private void btnViewSuper_Click(object sender, EventArgs e)
         {
             ViewAll view = new ViewAll();
-
             view.Show();
+            this.Hide();
+        }
 
+        private void SuperHeroHome_Resize(object sender, EventArgs e)
+        {
+            lblWelcome.Left = (pnlWelcome.ClientSize.Width - lblWelcome.Width) / 2;
+            lblWelcome.Top = (pnlWelcome.ClientSize.Height - lblWelcome.Height) / 2;
+        }
+
+        private void btnSummary_Click(object sender, EventArgs e)
+        {
+            SuperheroSummaryForm summaryForm = new SuperheroSummaryForm();
+            summaryForm.Show();
             this.Hide();
         }
     }
