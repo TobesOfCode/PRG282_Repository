@@ -54,6 +54,7 @@
             this.pnlC = new System.Windows.Forms.Panel();
             this.lblC = new System.Windows.Forms.Label();
             this.pnlTotal = new System.Windows.Forms.Panel();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.lblTotalHeroes = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -64,24 +65,23 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.chartRanks = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlMiddle = new System.Windows.Forms.Panel();
-            this.btnSaveToFile = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.lblTopHero = new System.Windows.Forms.Label();
-            this.pnlHeading = new System.Windows.Forms.Panel();
-            this.lblHeading = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlFun = new System.Windows.Forms.Panel();
-            this.pnlSave = new System.Windows.Forms.Panel();
             this.pnlBack = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.pnlSave = new System.Windows.Forms.Panel();
+            this.btnSaveToFile = new System.Windows.Forms.Button();
+            this.pnlFun = new System.Windows.Forms.Panel();
+            this.pnlMiddle = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMid1 = new System.Windows.Forms.Panel();
-            this.pnlMid2 = new System.Windows.Forms.Panel();
-            this.pnlMid3 = new System.Windows.Forms.Panel();
-            this.lblTop = new System.Windows.Forms.Label();
-            this.lblFunFact = new System.Windows.Forms.Label();
             this.lblFunFact2 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.pnlMid2 = new System.Windows.Forms.Panel();
+            this.lblTopHero = new System.Windows.Forms.Label();
+            this.lblTop = new System.Windows.Forms.Label();
+            this.pnlMid3 = new System.Windows.Forms.Panel();
+            this.lblFunFact = new System.Windows.Forms.Label();
+            this.pnlHeading = new System.Windows.Forms.Panel();
+            this.lblHeading = new System.Windows.Forms.Label();
             this.pnlAge.SuspendLayout();
             this.pnlScore.SuspendLayout();
             this.pnlS.SuspendLayout();
@@ -98,24 +98,24 @@
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRanks)).BeginInit();
             this.panel3.SuspendLayout();
-            this.pnlMiddle.SuspendLayout();
-            this.pnlHeading.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.pnlFun.SuspendLayout();
-            this.pnlSave.SuspendLayout();
             this.pnlBack.SuspendLayout();
+            this.pnlSave.SuspendLayout();
+            this.pnlFun.SuspendLayout();
+            this.pnlMiddle.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.pnlMid1.SuspendLayout();
             this.pnlMid2.SuspendLayout();
             this.pnlMid3.SuspendLayout();
+            this.pnlHeading.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNewFunFact
             // 
-            this.btnNewFunFact.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnNewFunFact.Location = new System.Drawing.Point(0, 46);
+            this.btnNewFunFact.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNewFunFact.Location = new System.Drawing.Point(0, 0);
             this.btnNewFunFact.Name = "btnNewFunFact";
-            this.btnNewFunFact.Size = new System.Drawing.Size(107, 27);
+            this.btnNewFunFact.Size = new System.Drawing.Size(109, 74);
             this.btnNewFunFact.TabIndex = 10;
             this.btnNewFunFact.Text = "Fun Fact";
             this.btnNewFunFact.UseVisualStyleBackColor = true;
@@ -347,6 +347,17 @@
             this.pnlTotal.Size = new System.Drawing.Size(349, 109);
             this.pnlTotal.TabIndex = 4;
             // 
+            // lblTotal
+            // 
+            this.lblTotal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(0, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(347, 32);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "Average Test Score";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // lblTotalHeroes
             // 
             this.lblTotalHeroes.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -478,11 +489,11 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 232F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 232F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 232F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 232F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 248F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1093, 248);
             this.tableLayoutPanel5.TabIndex = 16;
             // 
@@ -508,80 +519,12 @@
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.tableLayoutPanel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(488, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(115, 242);
             this.panel3.TabIndex = 15;
-            // 
-            // pnlMiddle
-            // 
-            this.pnlMiddle.BackColor = System.Drawing.Color.LemonChiffon;
-            this.pnlMiddle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMiddle.Controls.Add(this.tableLayoutPanel6);
-            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMiddle.Location = new System.Drawing.Point(3, 316);
-            this.pnlMiddle.Name = "pnlMiddle";
-            this.pnlMiddle.Size = new System.Drawing.Size(1093, 56);
-            this.pnlMiddle.TabIndex = 14;
-            // 
-            // btnSaveToFile
-            // 
-            this.btnSaveToFile.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSaveToFile.Location = new System.Drawing.Point(0, 46);
-            this.btnSaveToFile.Name = "btnSaveToFile";
-            this.btnSaveToFile.Size = new System.Drawing.Size(107, 27);
-            this.btnSaveToFile.TabIndex = 12;
-            this.btnSaveToFile.Text = "Save to File";
-            this.btnSaveToFile.UseVisualStyleBackColor = true;
-            this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnBack.Location = new System.Drawing.Point(0, 49);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(107, 27);
-            this.btnBack.TabIndex = 11;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // lblTopHero
-            // 
-            this.lblTopHero.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTopHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopHero.Location = new System.Drawing.Point(0, 17);
-            this.lblTopHero.Name = "lblTopHero";
-            this.lblTopHero.Size = new System.Drawing.Size(357, 31);
-            this.lblTopHero.TabIndex = 9;
-            this.lblTopHero.Text = "0";
-            this.lblTopHero.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblTopHero.Click += new System.EventHandler(this.lblTopHero_Click);
-            // 
-            // pnlHeading
-            // 
-            this.pnlHeading.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.pnlHeading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlHeading.Controls.Add(this.lblHeading);
-            this.pnlHeading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHeading.Location = new System.Drawing.Point(3, 3);
-            this.pnlHeading.Name = "pnlHeading";
-            this.pnlHeading.Size = new System.Drawing.Size(1093, 56);
-            this.pnlHeading.TabIndex = 17;
-            // 
-            // lblHeading
-            // 
-            this.lblHeading.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeading.Location = new System.Drawing.Point(449, 7);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(152, 31);
-            this.lblHeading.TabIndex = 10;
-            this.lblHeading.Text = "SUMMARY";
             // 
             // tableLayoutPanel4
             // 
@@ -597,8 +540,48 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(113, 240);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(115, 242);
             this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // pnlBack
+            // 
+            this.pnlBack.Controls.Add(this.btnBack);
+            this.pnlBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBack.Location = new System.Drawing.Point(3, 163);
+            this.pnlBack.Name = "pnlBack";
+            this.pnlBack.Size = new System.Drawing.Size(109, 76);
+            this.pnlBack.TabIndex = 2;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 76);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // pnlSave
+            // 
+            this.pnlSave.Controls.Add(this.btnSaveToFile);
+            this.pnlSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSave.Location = new System.Drawing.Point(3, 83);
+            this.pnlSave.Name = "pnlSave";
+            this.pnlSave.Size = new System.Drawing.Size(109, 74);
+            this.pnlSave.TabIndex = 1;
+            // 
+            // btnSaveToFile
+            // 
+            this.btnSaveToFile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSaveToFile.Location = new System.Drawing.Point(0, 0);
+            this.btnSaveToFile.Name = "btnSaveToFile";
+            this.btnSaveToFile.Size = new System.Drawing.Size(109, 74);
+            this.btnSaveToFile.TabIndex = 12;
+            this.btnSaveToFile.Text = "Save to File";
+            this.btnSaveToFile.UseVisualStyleBackColor = true;
+            this.btnSaveToFile.Click += new System.EventHandler(this.btnSaveToFile_Click);
             // 
             // pnlFun
             // 
@@ -606,26 +589,19 @@
             this.pnlFun.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFun.Location = new System.Drawing.Point(3, 3);
             this.pnlFun.Name = "pnlFun";
-            this.pnlFun.Size = new System.Drawing.Size(107, 73);
+            this.pnlFun.Size = new System.Drawing.Size(109, 74);
             this.pnlFun.TabIndex = 0;
             // 
-            // pnlSave
+            // pnlMiddle
             // 
-            this.pnlSave.Controls.Add(this.btnSaveToFile);
-            this.pnlSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSave.Location = new System.Drawing.Point(3, 82);
-            this.pnlSave.Name = "pnlSave";
-            this.pnlSave.Size = new System.Drawing.Size(107, 73);
-            this.pnlSave.TabIndex = 1;
-            // 
-            // pnlBack
-            // 
-            this.pnlBack.Controls.Add(this.btnBack);
-            this.pnlBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBack.Location = new System.Drawing.Point(3, 161);
-            this.pnlBack.Name = "pnlBack";
-            this.pnlBack.Size = new System.Drawing.Size(107, 76);
-            this.pnlBack.TabIndex = 2;
+            this.pnlMiddle.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pnlMiddle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMiddle.Controls.Add(this.tableLayoutPanel6);
+            this.pnlMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMiddle.Location = new System.Drawing.Point(3, 316);
+            this.pnlMiddle.Name = "pnlMiddle";
+            this.pnlMiddle.Size = new System.Drawing.Size(1093, 56);
+            this.pnlMiddle.TabIndex = 14;
             // 
             // tableLayoutPanel6
             // 
@@ -653,6 +629,17 @@
             this.pnlMid1.Size = new System.Drawing.Size(357, 48);
             this.pnlMid1.TabIndex = 0;
             // 
+            // lblFunFact2
+            // 
+            this.lblFunFact2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFunFact2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFunFact2.Location = new System.Drawing.Point(0, 0);
+            this.lblFunFact2.Name = "lblFunFact2";
+            this.lblFunFact2.Size = new System.Drawing.Size(357, 48);
+            this.lblFunFact2.TabIndex = 9;
+            this.lblFunFact2.Text = "label9";
+            this.lblFunFact2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pnlMid2
             // 
             this.pnlMid2.Controls.Add(this.lblTopHero);
@@ -663,14 +650,17 @@
             this.pnlMid2.Size = new System.Drawing.Size(357, 48);
             this.pnlMid2.TabIndex = 1;
             // 
-            // pnlMid3
+            // lblTopHero
             // 
-            this.pnlMid3.Controls.Add(this.lblFunFact);
-            this.pnlMid3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMid3.Location = new System.Drawing.Point(729, 3);
-            this.pnlMid3.Name = "pnlMid3";
-            this.pnlMid3.Size = new System.Drawing.Size(359, 48);
-            this.pnlMid3.TabIndex = 2;
+            this.lblTopHero.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTopHero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopHero.Location = new System.Drawing.Point(0, 17);
+            this.lblTopHero.Name = "lblTopHero";
+            this.lblTopHero.Size = new System.Drawing.Size(357, 31);
+            this.lblTopHero.TabIndex = 9;
+            this.lblTopHero.Text = "0";
+            this.lblTopHero.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblTopHero.Click += new System.EventHandler(this.lblTopHero_Click);
             // 
             // lblTop
             // 
@@ -683,6 +673,15 @@
             this.lblTop.Text = "Top Superhero";
             this.lblTop.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pnlMid3
+            // 
+            this.pnlMid3.Controls.Add(this.lblFunFact);
+            this.pnlMid3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMid3.Location = new System.Drawing.Point(729, 3);
+            this.pnlMid3.Name = "pnlMid3";
+            this.pnlMid3.Size = new System.Drawing.Size(359, 48);
+            this.pnlMid3.TabIndex = 2;
+            // 
             // lblFunFact
             // 
             this.lblFunFact.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -694,27 +693,27 @@
             this.lblFunFact.Text = "label9";
             this.lblFunFact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblFunFact2
+            // pnlHeading
             // 
-            this.lblFunFact2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFunFact2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFunFact2.Location = new System.Drawing.Point(0, 0);
-            this.lblFunFact2.Name = "lblFunFact2";
-            this.lblFunFact2.Size = new System.Drawing.Size(357, 48);
-            this.lblFunFact2.TabIndex = 9;
-            this.lblFunFact2.Text = "label9";
-            this.lblFunFact2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlHeading.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnlHeading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlHeading.Controls.Add(this.lblHeading);
+            this.pnlHeading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHeading.Location = new System.Drawing.Point(3, 3);
+            this.pnlHeading.Name = "pnlHeading";
+            this.pnlHeading.Size = new System.Drawing.Size(1093, 56);
+            this.pnlHeading.TabIndex = 17;
             // 
-            // lblTotal
+            // lblHeading
             // 
-            this.lblTotal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(0, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(347, 32);
-            this.lblTotal.TabIndex = 6;
-            this.lblTotal.Text = "Average Test Score";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblHeading.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHeading.AutoSize = true;
+            this.lblHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeading.Location = new System.Drawing.Point(449, 7);
+            this.lblHeading.Name = "lblHeading";
+            this.lblHeading.Size = new System.Drawing.Size(152, 31);
+            this.lblHeading.TabIndex = 10;
+            this.lblHeading.Text = "SUMMARY";
             // 
             // SuperheroSummaryForm
             // 
@@ -723,6 +722,7 @@
             this.ClientSize = new System.Drawing.Size(1099, 629);
             this.Controls.Add(this.pnlHeadingish);
             this.Name = "SuperheroSummaryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Top Superhero";
             this.Load += new System.EventHandler(this.SuperheroSummaryForm_Load);
             this.pnlAge.ResumeLayout(false);
@@ -741,17 +741,17 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartRanks)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.pnlMiddle.ResumeLayout(false);
-            this.pnlHeading.ResumeLayout(false);
-            this.pnlHeading.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.pnlFun.ResumeLayout(false);
-            this.pnlSave.ResumeLayout(false);
             this.pnlBack.ResumeLayout(false);
+            this.pnlSave.ResumeLayout(false);
+            this.pnlFun.ResumeLayout(false);
+            this.pnlMiddle.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.pnlMid1.ResumeLayout(false);
             this.pnlMid2.ResumeLayout(false);
             this.pnlMid3.ResumeLayout(false);
+            this.pnlHeading.ResumeLayout(false);
+            this.pnlHeading.PerformLayout();
             this.ResumeLayout(false);
 
         }

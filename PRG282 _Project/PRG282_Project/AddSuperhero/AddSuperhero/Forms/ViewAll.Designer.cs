@@ -65,6 +65,7 @@
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.dgvViewSuperheroes);
             this.Name = "ViewAll";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewAll";
             this.Load += new System.EventHandler(this.ViewAll_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewSuperheroes)).EndInit();

@@ -153,20 +153,20 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(214, 464);
+            this.btnClear.Location = new System.Drawing.Point(176, 444);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(61, 21);
+            this.btnClear.Size = new System.Drawing.Size(87, 32);
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 462);
+            this.button1.Location = new System.Drawing.Point(12, 444);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(91, 32);
             this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
+            this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -190,6 +190,7 @@
             this.Controls.Add(this.txtBoxID);
             this.Controls.Add(this.label1);
             this.Name = "AddSuperhero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AddSuperhero_Load);
             this.ResumeLayout(false);

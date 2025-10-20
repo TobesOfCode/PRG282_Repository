@@ -72,6 +72,12 @@
     <Compile Include="Forms\SuperheroSummaryForm.Designer.cs">
       <DependentUpon>SuperheroSummaryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogicLayer\UIhelper.cs" />
     <Compile Include="PresentationLayer\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SuperheroSummaryForm.resx">
       <DependentUpon>SuperheroSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

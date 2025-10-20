@@ -51,5 +51,17 @@ namespace AddSuperhero
             summaryForm.Show();
             this.Hide();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Update update = new Update();
+            update.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
