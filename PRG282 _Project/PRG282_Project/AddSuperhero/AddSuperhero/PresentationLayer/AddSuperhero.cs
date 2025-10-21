@@ -24,11 +24,6 @@ namespace AddSuperhero
             Application.Exit();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -90,6 +85,43 @@ namespace AddSuperhero
         }
 
         private void AddSuperhero_Load(object sender, EventArgs e)
+        {
+            UIhelper.CenterLabelAndTextBox(pnl1, lblID, txtBoxID);
+            UIhelper.CenterLabelAndTextBox(pnl2, lblName, txtBoxName);
+            UIhelper.CenterLabelAndTextBox(pnl3, lblAge, txtBoxAge);
+            UIhelper.CenterLabelAndTextBox(pnl4, lblSuper, txtBoxSuperpower);
+            UIhelper.CenterLabelAndTextBox(pnl4, lblScore, txtBoxScore);
+            UIhelper.CenterLabelInPanel(lblHeading, pnlHeader);
+            UIhelper.CenterThreeButtons(btnBack, btnAdd, btnClear, pnlFooter);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddSuperhero_Resize(object sender, EventArgs e)
+        {
+            UIhelper.CenterLabelAndTextBox(pnl1, lblID, txtBoxID);
+            UIhelper.CenterLabelAndTextBox(pnl2, lblName, txtBoxName);
+            UIhelper.CenterLabelAndTextBox(pnl3, lblAge, txtBoxAge);
+            UIhelper.CenterLabelAndTextBox(pnl4, lblSuper, txtBoxSuperpower);
+            UIhelper.CenterLabelAndTextBox(pnl4, lblScore, txtBoxScore);
+            UIhelper.CenterLabelInPanel(lblHeading, pnlHeader);
+            UIhelper.CenterThreeButtons(btnBack, btnAdd, btnClear, pnlFooter);
+        }
+
+        private void lblHeading_Click(object sender, EventArgs e)
         {
 
         }

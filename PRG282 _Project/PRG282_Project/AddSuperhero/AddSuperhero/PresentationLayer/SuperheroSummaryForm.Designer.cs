@@ -190,7 +190,6 @@
             this.lblAvgScore.TabIndex = 2;
             this.lblAvgScore.Text = "0";
             this.lblAvgScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAvgScore.Click += new System.EventHandler(this.lblAvgScore_Click);
             // 
             // pnlS
             // 
@@ -368,7 +367,6 @@
             this.lblTotalHeroes.TabIndex = 5;
             this.lblTotalHeroes.Text = "0";
             this.lblTotalHeroes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTotalHeroes.Click += new System.EventHandler(this.lblTotalHeroes_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -660,7 +658,6 @@
             this.lblTopHero.TabIndex = 9;
             this.lblTopHero.Text = "0";
             this.lblTopHero.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lblTopHero.Click += new System.EventHandler(this.lblTopHero_Click);
             // 
             // lblTop
             // 

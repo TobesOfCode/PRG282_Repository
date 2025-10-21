@@ -1,4 +1,5 @@
-﻿using SuperheroSummaryApp;
+﻿using AddSuperhero.Forms;
+using SuperheroSummaryApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AddSuperhero;
 
 namespace AddSuperhero
 {
@@ -34,7 +36,7 @@ namespace AddSuperhero
 
         private void btnViewSuper_Click(object sender, EventArgs e)
         {
-            ViewAll view = new ViewAll();
+            LoadViewAll view = new LoadViewAll();
             view.Show();
             this.Hide();
         }
@@ -58,10 +60,18 @@ namespace AddSuperhero
             update.Show();
             this.Hide();
         }
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            frmDelete delete = new frmDelete();
+            delete.Show();
+            this.Hide();
+        }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SuperHeroHome_Load(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

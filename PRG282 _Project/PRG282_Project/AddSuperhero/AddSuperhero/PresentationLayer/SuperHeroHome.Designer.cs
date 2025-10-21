@@ -34,7 +34,7 @@
             this.btnViewSuper = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSummary = new System.Windows.Forms.Button();
             this.pnlWelcome = new System.Windows.Forms.Panel();
@@ -97,7 +97,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnDelete, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnUpdate, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnSummary, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAddHero, 0, 0);
@@ -111,16 +111,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 54);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(575, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 48);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Tristan ¯\\_( ͠° ͟ʖ °͠ )_/¯";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDelete.Location = new System.Drawing.Point(575, 3);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(138, 48);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete Records";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnUpdate
             // 
@@ -181,6 +181,7 @@
             this.Name = "SuperHeroHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.SuperHeroHome_Load);
             this.Resize += new System.EventHandler(this.SuperHeroHome_Resize);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -199,7 +200,7 @@
         private System.Windows.Forms.Panel pnlWelcome;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSummary;
     }

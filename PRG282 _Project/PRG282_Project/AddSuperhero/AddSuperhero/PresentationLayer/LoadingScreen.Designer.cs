@@ -44,6 +44,7 @@
             this.lblLoadingText.TabIndex = 0;
             this.lblLoadingText.Text = "Loading...";
             this.lblLoadingText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLoadingText.Click += new System.EventHandler(this.lblLoadingText_Click);
             // 
             // progressBar1
             // 

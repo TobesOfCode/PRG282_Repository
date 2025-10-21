@@ -177,7 +177,6 @@
             this.lblID.Size = new System.Drawing.Size(29, 24);
             this.lblID.TabIndex = 9;
             this.lblID.Text = "ID";
-            this.lblID.Click += new System.EventHandler(this.lblID_Click);
             // 
             // lblName
             // 
@@ -266,7 +265,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1065, 89);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
@@ -385,7 +384,6 @@
             this.lblHeading.Size = new System.Drawing.Size(211, 31);
             this.lblHeading.TabIndex = 11;
             this.lblHeading.Text = "Update Records";
-            this.lblHeading.Click += new System.EventHandler(this.lblHeading_Click);
             // 
             // Update
             // 

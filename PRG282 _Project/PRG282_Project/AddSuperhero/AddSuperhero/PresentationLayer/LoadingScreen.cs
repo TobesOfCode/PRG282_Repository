@@ -28,7 +28,7 @@ namespace AddSuperhero.Forms
 
 
             lblLoadingText.Left = (this.ClientSize.Width - lblLoadingText.Width) / 2;
-            //lblLoadingText.Top = (ClientSize.Height - lblLoadingText.Height) / 2;
+            lblLoadingText.Top = (this.ClientSize.Height - lblLoadingText.Height) / 2;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -46,6 +46,11 @@ namespace AddSuperhero.Forms
                 mainForm.Show();
                 this.Hide();
             }
+        }
+
+        private void lblLoadingText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

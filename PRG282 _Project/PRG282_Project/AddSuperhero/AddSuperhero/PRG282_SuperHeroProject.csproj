@@ -48,55 +48,81 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataLayer\AddHero.cs" />
-    <Compile Include="Forms\AddSuperhero.cs">
+    <Compile Include="DataLayer\HeroDataHandler.cs" />
+    <Compile Include="DataLayer\SummarySave.cs" />
+    <Compile Include="LogicLayer\HeroLogic.cs" />
+    <Compile Include="PresentationLayer\AddSuperhero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddSuperhero.Designer.cs">
+    <Compile Include="PresentationLayer\AddSuperhero.Designer.cs">
       <DependentUpon>AddSuperhero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoadingScreen.cs">
+    <Compile Include="PresentationLayer\DeleteSuperhero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoadingScreen.Designer.cs">
+    <Compile Include="PresentationLayer\DeleteSuperhero.Designer.cs">
+      <DependentUpon>DeleteSuperhero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\LoadingScreen.Designer.cs">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SuperHeroHome.cs">
+    <Compile Include="PresentationLayer\LoadViewAll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SuperHeroHome.Designer.cs">
+    <Compile Include="PresentationLayer\LoadViewAll.Designer.cs">
+      <DependentUpon>LoadViewAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\SuperHeroHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\SuperHeroHome.Designer.cs">
       <DependentUpon>SuperHeroHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SuperheroSummaryForm.cs">
+    <Compile Include="PresentationLayer\SuperheroSummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SuperheroSummaryForm.Designer.cs">
+    <Compile Include="PresentationLayer\SuperheroSummaryForm.Designer.cs">
       <DependentUpon>SuperheroSummaryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Update.cs">
+    <Compile Include="PresentationLayer\Update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Update.Designer.cs">
+    <Compile Include="PresentationLayer\Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogicLayer\ChartHelper.cs" />
+    <Compile Include="LogicLayer\FunFactGenerator.cs" />
+    <Compile Include="LogicLayer\Hero.cs" />
+    <Compile Include="LogicLayer\HeroLoader.cs" />
+    <Compile Include="LogicLayer\HeroSummaryHelper.cs" />
     <Compile Include="LogicLayer\UIhelper.cs" />
     <Compile Include="PresentationLayer\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\ViewAll.cs">
+    <Compile Include="PresentationLayer\ViewAll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ViewAll.Designer.cs">
+    <Compile Include="PresentationLayer\ViewAll.Designer.cs">
       <DependentUpon>ViewAll.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\AddSuperhero.resx">
+    <EmbeddedResource Include="PresentationLayer\AddSuperhero.resx">
       <DependentUpon>AddSuperhero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoadingScreen.resx">
+    <EmbeddedResource Include="PresentationLayer\DeleteSuperhero.resx">
+      <DependentUpon>DeleteSuperhero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SuperheroSummaryForm.resx">
+    <EmbeddedResource Include="PresentationLayer\LoadViewAll.resx">
+      <DependentUpon>LoadViewAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\SuperheroSummaryForm.resx">
       <DependentUpon>SuperheroSummaryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Update.resx">
+    <EmbeddedResource Include="PresentationLayer\Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -108,10 +134,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\SuperHeroHome.resx">
+    <EmbeddedResource Include="PresentationLayer\SuperHeroHome.resx">
       <DependentUpon>SuperHeroHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewAll.resx">
+    <EmbeddedResource Include="PresentationLayer\ViewAll.resx">
       <DependentUpon>ViewAll.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
