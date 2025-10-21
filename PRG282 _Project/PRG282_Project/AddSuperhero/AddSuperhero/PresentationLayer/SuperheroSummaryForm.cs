@@ -9,14 +9,15 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-
 namespace SuperheroSummaryApp
 {
     public partial class SuperheroSummaryForm : Form
     {
+        // ===== Fields =====
         private List<Hero> heroes = new List<Hero>();
         private Random random = new Random();
 
+        // ===== Constructor =====
         public SuperheroSummaryForm()
         {
             InitializeComponent();
@@ -30,16 +31,16 @@ namespace SuperheroSummaryApp
             this.FormClosed += SuperFormClosed;
         }
 
+        // ===== Form Closed =====
         private void SuperFormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        // Display summary statistics
+        // ===== Display Summary =====
         private void DisplaySummary()
         {
             var summary = HeroSummaryHelper.GenerateSummary(heroes, "summary.txt");
-
             if (summary == null) return;
 
             lblTotalHeroes.Text = summary.TotalHeroes.ToString();
@@ -56,29 +57,24 @@ namespace SuperheroSummaryApp
             lblFunFact2.Text = $"Fun Fact: {summary.RandomHero.Name} can {summary.RandomHero.Ability}";
         }
 
-
-        // Fun facts button
+        // ===== Fun Facts Button =====
         private void btnNewFunFact_Click_1(object sender, EventArgs e)
         {
             if (heroes.Count == 0) return;
 
-            // Pick a random hero instance
             Hero hero = heroes[random.Next(heroes.Count)];
-
-            // Get two fun facts from the DataLayer using the hero instance
             var (fact1, fact2) = FunFactGenerator.GetTwoFunFacts(hero);
 
             lblFunFact.Text = fact1;
             lblFunFact2.Text = fact2;
 
-            // Optional: fit text to panel
             UIhelper.FitTextToPanel(lblFunFact, pnlMid3);
             UIhelper.FitTextToPanel(lblFunFact2, pnlMid3);
         }
 
+        // ===== Form Load =====
         private void SuperheroSummaryForm_Load(object sender, EventArgs e)
         {
-            // Center header labels
             UIhelper.CenterLabelInPanelHor(lblTotal, pnlTotal);
             UIhelper.CenterLabelInPanelHor(lblAverage, pnlAge);
             UIhelper.CenterLabelInPanelHor(lblTest, pnlScore);
@@ -89,7 +85,6 @@ namespace SuperheroSummaryApp
             UIhelper.CenterLabelInPanelHor(lblTopHero, pnlMid2);
             UIhelper.CenterLabelInPanelHor(lblTop, pnlMid2);
 
-            // Center data labels
             UIhelper.CenterLabelInPanel(lblTotalHeroes, pnlTotal);
             UIhelper.CenterLabelInPanel(lblAvgAge, pnlAge);
             UIhelper.CenterLabelInPanel(lblAvgScore, pnlScore);
@@ -108,6 +103,7 @@ namespace SuperheroSummaryApp
             lblFunFact.UseCompatibleTextRendering = true;
         }
 
+        // ===== Back Button =====
         private void btnBack_Click(object sender, EventArgs e)
         {
             SuperHeroHome home = new SuperHeroHome();
@@ -115,19 +111,20 @@ namespace SuperheroSummaryApp
             this.Hide();
         }
 
+        // ===== Save Summary to File =====
         private void btnSaveToFile_Click(object sender, EventArgs e)
         {
-                string summaryText =
-           "=== Superhero Academy Summary ===\n" +
-           "Total Heroes: " + lblTotalHeroes.Text + "\n" +
-           "Average Age: " + lblAvgAge.Text + "\n" +
-           "Average Score: " + lblAvgScore.Text + "\n" +
-           "S-Rank: " + lblSCount.Text + "\n" +
-           "A-Rank: " + lblACount.Text + "\n" +
-           "B-Rank: " + lblBCount.Text + "\n" +
-           "C-Rank: " + lblCCount.Text + "\n" +
-           "Top Hero: " + lblTopHero.Text + "\n" +
-           "Fun Fact: " + lblFunFact.Text + "\n";
+            string summaryText =
+                "=== Superhero Academy Summary ===\n" +
+                "Total Heroes: " + lblTotalHeroes.Text + "\n" +
+                "Average Age: " + lblAvgAge.Text + "\n" +
+                "Average Score: " + lblAvgScore.Text + "\n" +
+                "S-Rank: " + lblSCount.Text + "\n" +
+                "A-Rank: " + lblACount.Text + "\n" +
+                "B-Rank: " + lblBCount.Text + "\n" +
+                "C-Rank: " + lblCCount.Text + "\n" +
+                "Top Hero: " + lblTopHero.Text + "\n" +
+                "Fun Fact: " + lblFunFact.Text + "\n";
 
             try
             {

@@ -6,8 +6,10 @@ using System.Linq;
 
 namespace AddSuperhero.LogicLayer
 {
+    // ===== Hero Logic Layer: Handles DataTable conversion, search, update, and save =====
     public static class HeroLogic
     {
+        // ===== Convert List<AddHero> to DataTable =====
         public static DataTable ConvertHeroesToDataTable(List<AddHero> heroes)
         {
             var table = new DataTable("Superheroes");
@@ -28,8 +30,10 @@ namespace AddSuperhero.LogicLayer
             return table;
         }
 
+        // ===== Normalize Strings for Comparisons =====
         private static string Normalize(string s) => (s ?? string.Empty).Trim().ToUpperInvariant();
 
+        // ===== Find a Hero by ID or Name (Exact and Partial Match) =====
         public static AddHero FindHero(List<AddHero> heroes, string idInput, string nameInput)
         {
             if (heroes == null || heroes.Count == 0)
@@ -60,9 +64,10 @@ namespace AddSuperhero.LogicLayer
             var partialName = heroes.FirstOrDefault(h => Normalize(h.Name).Contains(normalizedSearch));
             return partialName;
         }
+
+        // ===== Update DataRow with Hero Properties =====
         public static void UpdateHero(AddHero hero, DataRow row)
         {
-            // Update the DataRow with hero properties
             row["HeroID"] = hero.HeroID;
             row["Name"] = hero.Name;
             row["Age"] = hero.Age.ToString();
@@ -72,6 +77,7 @@ namespace AddSuperhero.LogicLayer
             row["ThreatLevel"] = hero.ThreatLevel;
         }
 
+        // ===== Check if DataRow Differs from Hero Object =====
         public static bool HasChanges(AddHero hero, DataRow row)
         {
             bool idSame = string.Equals(row["HeroID"]?.ToString().Trim(), hero.HeroID.Trim(), StringComparison.OrdinalIgnoreCase);
@@ -85,6 +91,7 @@ namespace AddSuperhero.LogicLayer
             return !(idSame && nameSame && ageSame && superSame && scoreSame && rankSame && threatSame);
         }
 
+        // ===== Save All Heroes to File =====
         public static void SaveAllHeroes(List<AddHero> heroes, string filePath)
         {
             var handler = new HeroDataHandler(filePath);

@@ -7,8 +7,13 @@ using System.IO;
 
 namespace AddSuperhero.DataLayer
 {
+    // ===== SummarySave Class: Handles saving superhero summaries to a file =====
     public static class SummarySave
     {
+        // ===== Method: Save summary text to a file =====
+        // Parameters:
+        //   summaryText - the text to save
+        //   filePath - optional, defaults to "summary.txt"
         public static void SaveSummary(string summaryText, string filePath = "summary.txt")
         {
             try
@@ -17,7 +22,7 @@ namespace AddSuperhero.DataLayer
             }
             catch (Exception ex)
             {
-                // Throw exception so calling code can handle it (UI, logging, etc.)
+                // ===== Throw exception so UI or calling code can handle it =====
                 throw new Exception("Error saving summary: " + ex.Message);
             }
         }

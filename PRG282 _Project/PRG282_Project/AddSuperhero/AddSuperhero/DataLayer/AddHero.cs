@@ -3,8 +3,11 @@ using System.IO;
 
 namespace AddSuperhero
 {
-    public class AddHero   // <-- make this public
+    // ===== AddHero Class =====
+    // Represents a superhero and handles rank/threat logic and saving to file.
+    public class AddHero
     {
+        // ===== Properties =====
         public string HeroID { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
@@ -13,6 +16,7 @@ namespace AddSuperhero
         public string Rank { get; private set; }
         public string ThreatLevel { get; private set; }
 
+        // ===== Constructor =====
         public AddHero(string heroID, string name, int age, string superpower, int examScore)
         {
             HeroID = heroID;
@@ -23,6 +27,8 @@ namespace AddSuperhero
             DetermineRankAndThreat();
         }
 
+        // ===== Method: DetermineRankAndThreat =====
+        // Determines the hero's rank and threat level based on their exam score
         private void DetermineRankAndThreat()
         {
             if (ExamScore >= 81 && ExamScore <= 100)
@@ -47,6 +53,8 @@ namespace AddSuperhero
             }
         }
 
+        // ===== Method: SaveToFile =====
+        // Appends the hero record to the given file path
         public void SaveToFile(string filePath)
         {
             try

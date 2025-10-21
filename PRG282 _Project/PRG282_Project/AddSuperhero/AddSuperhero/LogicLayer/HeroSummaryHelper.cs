@@ -7,8 +7,10 @@ using System.IO;
 
 namespace AddSuperhero.LogicLayer
 {
+    // ===== Helper class for generating superhero summary statistics =====
     public static class HeroSummaryHelper
     {
+        // ===== Hero Summary Data Structure =====
         public class HeroSummary
         {
             public int TotalHeroes { get; set; }
@@ -20,20 +22,28 @@ namespace AddSuperhero.LogicLayer
             public string SummaryText { get; set; }
         }
 
+        // ===== Generate Summary Statistics for a List of Heroes =====
         public static HeroSummary GenerateSummary(List<Hero> heroes, string outputFilePath = null)
         {
             if (heroes == null || heroes.Count == 0)
                 return null;
 
             var random = new Random();
+
+            // ===== Basic Stats =====
             var totalHeroes = heroes.Count;
             var avgAge = heroes.Average(h => h.Age);
             var avgScore = heroes.Average(h => h.Score);
+
+            // ===== Rank Counts =====
             var rankCounts = heroes.GroupBy(h => h.Rank)
                                    .ToDictionary(g => g.Key, g => g.Count());
+
+            // ===== Top and Random Heroes =====
             var topHero = heroes.OrderByDescending(h => h.Score).First();
             var randomHero = heroes[random.Next(heroes.Count)];
 
+            // ===== Build Summary Text =====
             var summaryText =
                 "=== Superhero Academy Summary ===\n" +
                 $"Total Heroes: {totalHeroes}\n" +
@@ -46,6 +56,7 @@ namespace AddSuperhero.LogicLayer
                 $"Top Hero: {topHero.Name} ({topHero.Score}) - {topHero.Rank}\n" +
                 $"Fun Fact: {randomHero.Name} can {randomHero.Ability}\n";
 
+            // ===== Save to File if Path Provided =====
             if (!string.IsNullOrEmpty(outputFilePath))
             {
                 try
@@ -54,11 +65,11 @@ namespace AddSuperhero.LogicLayer
                 }
                 catch (Exception ex)
                 {
-                    // Optional: handle exceptions here or throw
                     Console.WriteLine("Error saving summary: " + ex.Message);
                 }
             }
 
+            // ===== Return HeroSummary Object =====
             return new HeroSummary
             {
                 TotalHeroes = totalHeroes,

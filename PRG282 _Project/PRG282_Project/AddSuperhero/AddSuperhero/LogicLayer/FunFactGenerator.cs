@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace AddSuperhero.LogicLayer
 {
+    // ===== FunFactGenerator Class: Generates entertaining facts for a hero =====
     public static class FunFactGenerator
     {
+        // ===== Random instance used for selecting fun facts =====
         private static Random random = new Random();
 
+        // ===== Method: Returns two unique fun facts for a given hero =====
         public static (string, string) GetTwoFunFacts(Hero hero)
         {
             if (hero == null) throw new ArgumentNullException(nameof(hero));
 
+            // ===== Collection of pre-defined fun facts based on hero properties =====
             List<string> funFacts = new List<string>
             {
                 hero.Name + " can " + hero.Ability + " like a true academy legend!",
@@ -36,6 +40,7 @@ namespace AddSuperhero.LogicLayer
                 hero.Name + " proves age doesn’t matter — their " + hero.Score + " score speaks for itself!"
             };
 
+            // ===== Randomly pick two distinct indices =====
             int firstIndex = random.Next(funFacts.Count);
             int secondIndex;
             do
@@ -43,6 +48,7 @@ namespace AddSuperhero.LogicLayer
                 secondIndex = random.Next(funFacts.Count);
             } while (secondIndex == firstIndex);
 
+            // ===== Return two unique fun facts =====
             return (funFacts[firstIndex], funFacts[secondIndex]);
         }
     }

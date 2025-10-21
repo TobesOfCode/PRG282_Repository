@@ -36,7 +36,7 @@
             this.txtBoxName = new System.Windows.Forms.TextBox();
             this.txtBoxScore = new System.Windows.Forms.TextBox();
             this.dgvUpdate = new System.Windows.Forms.DataGridView();
-            this.pnlHeading = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
@@ -154,18 +154,18 @@
             this.dgvUpdate.TabIndex = 7;
             this.dgvUpdate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUpdate_CellContentClick);
             // 
-            // pnlHeading
+            // btnBack
             // 
-            this.pnlHeading.AutoSize = true;
-            this.pnlHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlHeading.Location = new System.Drawing.Point(712, 2);
-            this.pnlHeading.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlHeading.Name = "pnlHeading";
-            this.pnlHeading.Size = new System.Drawing.Size(351, 84);
-            this.pnlHeading.TabIndex = 8;
-            this.pnlHeading.Text = "Back";
-            this.pnlHeading.UseVisualStyleBackColor = true;
-            this.pnlHeading.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.AutoSize = true;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(712, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(351, 84);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblID
             // 
@@ -257,7 +257,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.pnlHeading, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnBack, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnFind, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -430,7 +430,7 @@
         private System.Windows.Forms.TextBox txtBoxName;
         private System.Windows.Forms.TextBox txtBoxScore;
         private System.Windows.Forms.DataGridView dgvUpdate;
-        private System.Windows.Forms.Button pnlHeading;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblAge;

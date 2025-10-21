@@ -8,17 +8,21 @@ using System.Windows.Forms;
 
 namespace AddSuperhero.LogicLayer
 {
+    // ===== Hero Loader: Loads heroes from text file into a List<Hero> =====
     public static class HeroLoader
     {
+        // ===== Load Heroes from File =====
         public static List<Hero> LoadHeroesFromFile(string filePath)
         {
             var heroes = new List<Hero>();
 
             try
             {
+                // ===== Check if file exists =====
                 if (!File.Exists(filePath))
                     throw new FileNotFoundException("The heroes file was not found.", filePath);
 
+                // ===== Read each line and parse hero data =====
                 foreach (var line in File.ReadAllLines(filePath))
                 {
                     var data = line.Split(',');
@@ -40,6 +44,7 @@ namespace AddSuperhero.LogicLayer
             }
             catch (Exception ex)
             {
+                // ===== Handle errors gracefully =====
                 MessageBox.Show("Error loading heroes: " + ex.Message, "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

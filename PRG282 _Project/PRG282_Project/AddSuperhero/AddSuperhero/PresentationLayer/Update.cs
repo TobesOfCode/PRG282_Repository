@@ -10,51 +10,55 @@ namespace AddSuperhero
 {
     public partial class Update : Form
     {
+        // ===== Fields =====
         private readonly string filePath = "superheroes.txt";
         private DataTable table;
         private BindingSource bs = new BindingSource();
-        private List<AddHero> heroes; // field to hold all heroes
+        private List<AddHero> heroes;
 
+        // ===== Constructor =====
         public Update()
         {
             InitializeComponent();
 
             this.Load += Update_Load;
+            this.FormClosed += SuperFormClosed;
+            this.Resize += Update_Resize;
+
             dgvUpdate.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvUpdate.ReadOnly = true;
             dgvUpdate.SelectionChanged += dgvUpdate_SelectionChanged;
+            dgvUpdate.CellContentClick += dgvUpdate_CellContentClick;
 
             btnFind.Click += btnFind_Click;
             btnUpdate.Click += btnUpdate_Click;
-            this.FormClosed += SuperFormClosed;
+            btnBack.Click += btnBack_Click;
         }
 
+        // ===== Form Closed =====
         private void SuperFormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
+        // ===== Form Load =====
         private void Update_Load(object sender, EventArgs e)
         {
             var dataHandler = new HeroDataHandler(filePath);
-            heroes = dataHandler.GetAllHeroes(); // assign to the field
+            heroes = dataHandler.GetAllHeroes();
 
-            // Convert to DataTable via Logic Layer
             table = HeroLogic.ConvertHeroesToDataTable(heroes);
-
             bs.DataSource = table;
             dgvUpdate.DataSource = bs;
             dgvUpdate.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            if (dgvUpdate.Rows.Count > 0) dgvUpdate.Rows[0].Selected = true;
 
-            UIhelper.CenterLabelAndTextBox(pnl1, lblID, txtBoxID);
-            UIhelper.CenterLabelAndTextBox(pnl2, lblName, txtBoxName);
-            UIhelper.CenterLabelAndTextBox(pnl3, lblAge, txtBoxAge);
-            UIhelper.CenterLabelAndTextBox(pnl4, lblSuperPower, txtBoxSuperpower);
-            UIhelper.CenterLabelAndTextBox(pnl5, lblScore, txtBoxScore);
-            UIhelper.CenterLabelInPanel(lblHeading, pnlHead);
+            if (dgvUpdate.Rows.Count > 0)
+                dgvUpdate.Rows[0].Selected = true;
+
+            CenterAllControls();
         }
 
+        // ===== Grid Selection Changed =====
         private void dgvUpdate_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvUpdate.CurrentRow == null) return;
@@ -66,13 +70,7 @@ namespace AddSuperhero
             txtBoxScore.Text = dgvUpdate.CurrentRow.Cells["ExamScore"].Value?.ToString() ?? "";
         }
 
-        private string Normalize(string s)
-        {
-            if (string.IsNullOrWhiteSpace(s)) return string.Empty;
-            var parts = s.Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-            return string.Join(" ", parts).ToLowerInvariant();
-        }
-
+        // ===== Find Hero =====
         private void btnFind_Click(object sender, EventArgs e)
         {
             if (dgvUpdate.Rows.Count == 0)
@@ -83,7 +81,6 @@ namespace AddSuperhero
 
             string idInput = txtBoxID.Text;
             string nameInput = txtBoxName.Text;
-
             AddHero foundHero = HeroLogic.FindHero(heroes, idInput, nameInput);
 
             if (foundHero != null)
@@ -91,8 +88,7 @@ namespace AddSuperhero
                 foreach (DataGridViewRow row in dgvUpdate.Rows)
                 {
                     if (row.IsNewRow) continue;
-                    var cid = row.Cells["HeroID"].Value?.ToString();
-                    if (cid == foundHero.HeroID)
+                    if (row.Cells["HeroID"].Value?.ToString() == foundHero.HeroID)
                     {
                         row.Selected = true;
                         dgvUpdate.CurrentCell = row.Cells["HeroID"];
@@ -103,11 +99,12 @@ namespace AddSuperhero
             }
             else
             {
-                MessageBox.Show("Hero not found by ID or Name. Try partial name or check spelling.", "Not found",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hero not found by ID or Name. Try partial name or check spelling.",
+                    "Not found", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
+        // ===== Update Hero =====
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (dgvUpdate.CurrentRow == null)
@@ -116,7 +113,6 @@ namespace AddSuperhero
                 return;
             }
 
-            // Validate numeric fields
             if (!int.TryParse(txtBoxAge.Text, out int age) || age <= 0)
             {
                 MessageBox.Show("Age must be a positive number.");
@@ -142,22 +138,15 @@ namespace AddSuperhero
 
             if (!HeroLogic.HasChanges(updatedHero, row))
             {
-                MessageBox.Show("No changes detected. Record remains the same.", "No changes",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No changes detected. Record remains the same.",
+                    "No changes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // Update the DataRow
             HeroLogic.UpdateHero(updatedHero, row);
-
-            // Update in-memory list
             int indexInList = heroes.FindIndex(h => h.HeroID == updatedHero.HeroID);
-            if (indexInList >= 0)
-            {
-                heroes[indexInList] = updatedHero;
-            }
+            if (indexInList >= 0) heroes[indexInList] = updatedHero;
 
-            // Persist changes
             HeroLogic.SaveAllHeroes(heroes, filePath);
 
             dgvUpdate.Refresh();
@@ -167,6 +156,7 @@ namespace AddSuperhero
             MessageBox.Show("Superhero updated successfully!");
         }
 
+        // ===== Back Button =====
         private void btnBack_Click(object sender, EventArgs e)
         {
             SuperHeroHome home = new SuperHeroHome();
@@ -174,18 +164,26 @@ namespace AddSuperhero
             this.Hide();
         }
 
+        // ===== Resize Event =====
         private void Update_Resize(object sender, EventArgs e)
+        {
+            CenterAllControls();
+        }
+
+        // ===== Helper: Center Controls =====
+        private void CenterAllControls()
         {
             UIhelper.CenterLabelAndTextBox(pnl1, lblID, txtBoxID);
             UIhelper.CenterLabelAndTextBox(pnl2, lblName, txtBoxName);
             UIhelper.CenterLabelAndTextBox(pnl3, lblAge, txtBoxAge);
             UIhelper.CenterLabelAndTextBox(pnl4, lblSuperPower, txtBoxSuperpower);
             UIhelper.CenterLabelAndTextBox(pnl5, lblScore, txtBoxScore);
+            UIhelper.CenterLabelInPanel(lblHeading, pnlHead);
         }
 
+        // ===== Grid Click =====
         private void dgvUpdate_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
     }
 }

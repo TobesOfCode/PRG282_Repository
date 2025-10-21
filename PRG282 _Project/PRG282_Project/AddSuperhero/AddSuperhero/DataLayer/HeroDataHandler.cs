@@ -7,15 +7,21 @@ using System.IO;
 
 namespace AddSuperhero.DataLayer
 {
+    // ===== HeroDataHandler Class =====
+    // Handles loading and saving superhero data to a file.
     public class HeroDataHandler
     {
         private readonly string _filePath;
 
+        // ===== Constructor =====
+        // filePath: the path to the superhero data file
         public HeroDataHandler(string filePath)
         {
             _filePath = filePath;
         }
 
+        // ===== Method: GetAllHeroes =====
+        // Reads all heroes from the file and returns a list of AddHero objects
         public List<AddHero> GetAllHeroes()
         {
             var heroes = new List<AddHero>();
@@ -35,10 +41,15 @@ namespace AddSuperhero.DataLayer
             return heroes;
         }
 
+        // ===== Method: SaveHero =====
+        // Saves a single hero to the file
         public void SaveHero(AddHero hero)
         {
             hero.SaveToFile(_filePath);
         }
+
+        // ===== Method: SaveHeroes =====
+        // Saves all heroes from a list to the file (overwrites existing file)
         public void SaveHeroes(List<AddHero> heroes)
         {
             var lines = new List<string>();
